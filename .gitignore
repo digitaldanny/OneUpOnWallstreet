@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Environments
+lynch_env/
+
 # Distribution / packaging
 .Python
 build/
