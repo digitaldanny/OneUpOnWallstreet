@@ -1,0 +1,14 @@
+repos:
+  - repo: local
+    hooks:
+      - id: revision-checker
+        name: Revision Checker
+        entry: python revision_checker.py
+        language: python
+        stages: [commit]
+        types: [python]
+      - id: commit-message-style
+        name: Commit Message Style
+        entry: bash -c '[[ $(git log -1 --pretty=%B) =~ ^#([0-9]+):.* ]]''
+        language: system
+        stages: [commit-msg]
